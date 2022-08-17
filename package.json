@@ -1,0 +1,23 @@
+{
+  "name": "data-structures",
+  "version": "1.0.0",
+  "description": "Playground for learning how to program data structures",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josephclander/data-structures.git"
+  },
+  "author": "J Lander",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josephclander/data-structures/issues"
+  },
+  "homepage": "https://github.com/josephclander/data-structures#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
