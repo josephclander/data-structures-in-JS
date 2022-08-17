@@ -60,6 +60,32 @@ class BinarySearchTree {
     }
     return null;
   }
+  remove(value) {
+    // search for node
+    let prevNode = null;
+    let currentNode = this.root;
+    let isFound = false;
+    while (!isFound) {
+      if (value < currentNode.value && currentNode.left) {
+        prevNode = currentNode;
+        currentNode = currentNode.left;
+      } else if (currentNode.right) {
+        prevNode = currentNode;
+        currentNode = currentNode.right;
+      } else {
+        isFound = true;
+      }
+    }
+    // check if leaf
+    if (!currentNode.left && !currentNode.right) {
+      prevNode.left.value === currentNode.value
+        ? (prevNode.left = null)
+        : (prevNode.right = null);
+    }
+    // if node has one child
+    // else replace node with successor on right
+    return this.root;
+  }
 }
 
 module.exports = {
