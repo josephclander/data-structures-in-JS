@@ -64,7 +64,7 @@ class BinarySearchTree {
     // search for node
     let prevNode = null;
     let currentNode = this.root;
-    while (!currentNode.value === value) {
+    while (currentNode.value !== value) {
       if (value < currentNode.value && currentNode.left) {
         prevNode = currentNode;
         currentNode = currentNode.left;
@@ -80,6 +80,7 @@ class BinarySearchTree {
         : (prevNode.right = null);
     }
     // if node has one child
+
     // else replace node with successor on right
     return this.root;
   }
