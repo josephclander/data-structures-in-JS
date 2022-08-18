@@ -73,14 +73,18 @@ class BinarySearchTree {
         currentNode = currentNode.right;
       }
     }
+    // checks for children
+    const isNodeLeft = currentNode.left !== null;
+    const isNodeRight = currentNode.right !== null;
     // check if leaf
-    if (!currentNode.left && !currentNode.right) {
+    if (!isNodeLeft && !isNodeRight) {
       prevNode.left.value === currentNode.value
         ? (prevNode.left = null)
         : (prevNode.right = null);
     }
     // if node has one child
-
+    if (isNodeLeft && !isNodeRight) {
+    }
     // else replace node with successor on right
     return this.root;
   }

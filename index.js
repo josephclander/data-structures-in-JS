@@ -11,5 +11,10 @@ tree.insert(170);
 tree.insert(15);
 tree.insert(1);
 // console.log(tree.lookup(170));
-// console.log(tree.root);
-console.log(tree.remove(15));
+console.log(tree.root);
+// console.log(tree.remove(15));
+console.log(tree.remove(20));
+
+//      9
+//   4     20
+// 1  6  xx  170
