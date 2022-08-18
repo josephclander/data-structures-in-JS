@@ -84,6 +84,20 @@ class BinarySearchTree {
     }
     // if node has one child
     if (isNodeLeft && !isNodeRight) {
+      // find side current node is of previous node
+      if (prevNode.left.value === currentNode.value) {
+        prevNode.left = currentNode.left;
+      } else {
+        prevNode.right = currentNode.left;
+      }
+    }
+    if (!isNodeLeft && isNodeRight) {
+      // find side current node is of previous node
+      if (prevNode.left.value === currentNode.value) {
+        prevNode.left = currentNode.right;
+      } else {
+        prevNode.right = currentNode.right;
+      }
     }
     // else replace node with successor on right
     return this.root;
