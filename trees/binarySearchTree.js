@@ -64,16 +64,13 @@ class BinarySearchTree {
     // search for node
     let prevNode = null;
     let currentNode = this.root;
-    let isFound = false;
-    while (!isFound) {
+    while (!currentNode.value === value) {
       if (value < currentNode.value && currentNode.left) {
         prevNode = currentNode;
         currentNode = currentNode.left;
       } else if (currentNode.right) {
         prevNode = currentNode;
         currentNode = currentNode.right;
-      } else {
-        isFound = true;
       }
     }
     // check if leaf
