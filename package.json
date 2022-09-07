@@ -4,7 +4,7 @@
   "description": "Playground for learning how to program data structures",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --watch",
     "start": "nodemon index.js"
   },
   "repository": {
