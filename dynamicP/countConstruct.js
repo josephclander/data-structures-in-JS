@@ -12,7 +12,7 @@ const countConstruct = (target, values, memo = {}) => {
   for (let value of values) {
     if (target.indexOf(value) === 0) {
       const suffix = target.slice(value.length);
-      combos += countConstruct(suffix, values);
+      combos += countConstruct(suffix, values, memo);
     }
   }
   memo[target] = combos;
