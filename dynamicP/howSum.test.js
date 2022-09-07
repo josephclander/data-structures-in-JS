@@ -2,7 +2,7 @@ const { howSum } = require('./howSum');
 
 const expected = howSum(7, [2, 3]).reduce((tot, cur) => tot + cur, 0);
 test('howSum(7, [2, 3]) correct 2 combinations', () => {
-  expect(expected7).toBe(7);
+  expect(expected).toBe(7);
 });
 
 const expected7 = howSum(7, [5, 3, 4, 7]).reduce((tot, cur) => tot + cur, 0);
